@@ -49,6 +49,9 @@ CREATE TABLE task_interest(
 	FOREIGN KEY (task_id) REFERENCES tasks(task_id)
 );
 
+INSERT INTO Users VALUES(1,'usamapuri','Usama', 12345678, 'usamapuri@gmail.com');
+INSERT INTO Users VALUES(2,'hanakasatio','Hanaka', 12345678, 'hanaka.saito@minerva.kgi.edu');
+INSERT INTO Users VALUES(3,'chloego','Chloe', 12345678, 'go@minerva.kgi.edu');
 
 INSERT INTO Tasks VALUES(1, 'Marathon' , 'Run a Marathon');
 INSERT INTO Tasks VALUES(2, 'Letters' , 'Write 14 letters to Loved Ones');
@@ -67,22 +70,49 @@ INSERT INTO Tasks VALUES(14, 'Splits', 'Do some splits for everyday');
 INSERT INTO Tasks VALUES(15, 'Workout' , 'Workout Everyday for 15 days');
 
 
-INSERT INTO Interests VALUES(11, '#health');
-INSERT INTO Interests VALUES(22, '#body');
-INSERT INTO Interests VALUES(33, '#wellbeing');
-INSERT INTO Interests VALUES(44, '#sports');
-INSERT INTO Interests VALUES(55, '#friends');
-INSERT INTO Interests VALUES(66, '#amily');
-INSERT INTO Interests VALUES(77, '#food');
-INSERT INTO Interests VALUES(88, '#dance');
-INSERT INTO Interests VALUES(99, '#storytelling');
-INSERT INTO Interests VALUES(111, '#videoediting');
-INSERT INTO Interests VALUES(122, '#artsandcrafts');
-INSERT INTO Interests VALUES(133, '#computerscience');
-INSERT INTO Interests VALUES(144, '#academic');
-INSERT INTO Interests VALUES(155, '#film' );
+INSERT INTO Interests VALUES(1, '#health');
+INSERT INTO Interests VALUES(2, '#body');
+INSERT INTO Interests VALUES(3, '#wellbeing');
+INSERT INTO Interests VALUES(4, '#sports');
+INSERT INTO Interests VALUES(5, '#friends');
+INSERT INTO Interests VALUES(6, '#amily');
+INSERT INTO Interests VALUES(7, '#food');
+INSERT INTO Interests VALUES(8, '#dance');
+INSERT INTO Interests VALUES(9, '#storytelling');
+INSERT INTO Interests VALUES(11, '#videoediting');
+INSERT INTO Interests VALUES(12, '#artsandcrafts');
+INSERT INTO Interests VALUES(13, '#computerscience');
+INSERT INTO Interests VALUES(14, '#academic');
+INSERT INTO Interests VALUES(15, '#film' );
 
-
+INSERT INTO task_interests VALUES(1,1);
+INSERT INTO task_interests VALUES(4,1);
+INSERT INTO task_interests VALUES(14,1);
+INSERT INTO task_interests VALUES(2,1);
+INSERT INTO task_interests VALUES(2,4);
+INSERT INTO task_interests VALUES(2,15);
+INSERT INTO task_interests VALUES(3,1);
+INSERT INTO task_interests VALUES(3,2);
+INSERT INTO task_interests VALUES(3,5);
+INSERT INTO task_interests VALUES(3,10);
+INSERT INTO task_interests VALUES(4,1);
+INSERT INTO task_interests VALUES(4,15);
+INSERT INTO task_interests VALUES(5,2);
+INSERT INTO task_interests VALUES(6,2);
+INSERT INTO task_interests VALUES(7,3);
+INSERT INTO task_interests VALUES(8,4);
+INSERT INTO task_interests VALUES(9,6);
+INSERT INTO task_interests VALUES(9,10);
+INSERT INTO task_interests VALUES(11,6);
+INSERT INTO task_interests VALUES(11,10);
+INSERT INTO task_interests VALUES(12,6);
+INSERT INTO task_interests VALUES(12,7);
+INSERT INTO task_interests VALUES(12,8);
+INSERT INTO task_interests VALUES(12,13);
+INSERT INTO task_interests VALUES(13,8);
+INSERT INTO task_interests VALUES(14,8);
+INSERT INTO task_interests VALUES(15,11);
+INSERT INTO task_interests VALUES(15,13);
 
 
 
