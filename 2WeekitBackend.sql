@@ -1,24 +1,24 @@
 PRAGMA foreign_keys = ON;
 
-CREATE TABLE Users (
+CREATE TABLE Users(
 	user_id INTEGER PRIMARY KEY,
 	username VARCHAR(20),
 	name VARCHAR(20),
 	password VARCHAR(20),
-	email VARCHAR(20),
+	email VARCHAR(20)
 
 );
 
 CREATE TABLE Tasks(
 	task_id INTEGER PRIMARY KEY,
 	task_name varchar(20),
-	task_def varchar(200),
+	task_def varchar(200)
 );
 
 
 CREATE Table Interests(
 	interest_id INTEGER PRIMARY KEY,
-	interest_name varchar(20),	
+	interest_name varchar(20)
 );
 
 
@@ -29,14 +29,14 @@ CREATE TABLE Dashboard(
 );
 
 
-CREATE TABLE task_completed (
+CREATE TABLE task_completed(
 	user_id INTEGER,
 	task_completed INTEGER,
-	FOREIGN KEY (uer_id) REFERENCES Users(user_id)
+	FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
 
-CREATE TABLE task_prog (
+CREATE TABLE task_prog(
 	user_id INTEGER,
 	task_in_prog INTEGER,
 	FOREIGN KEY (user_id) REFERENCES Users(user_id)
@@ -85,34 +85,31 @@ INSERT INTO Interests VALUES(13, '#computerscience');
 INSERT INTO Interests VALUES(14, '#academic');
 INSERT INTO Interests VALUES(15, '#film' );
 
-INSERT INTO task_interests VALUES(1,1);
-INSERT INTO task_interests VALUES(4,1);
-INSERT INTO task_interests VALUES(14,1);
-INSERT INTO task_interests VALUES(2,1);
-INSERT INTO task_interests VALUES(2,4);
-INSERT INTO task_interests VALUES(2,15);
-INSERT INTO task_interests VALUES(3,1);
-INSERT INTO task_interests VALUES(3,2);
-INSERT INTO task_interests VALUES(3,5);
-INSERT INTO task_interests VALUES(3,10);
-INSERT INTO task_interests VALUES(4,1);
-INSERT INTO task_interests VALUES(4,15);
-INSERT INTO task_interests VALUES(5,2);
-INSERT INTO task_interests VALUES(6,2);
-INSERT INTO task_interests VALUES(7,3);
-INSERT INTO task_interests VALUES(8,4);
-INSERT INTO task_interests VALUES(9,6);
-INSERT INTO task_interests VALUES(9,10);
-INSERT INTO task_interests VALUES(11,6);
-INSERT INTO task_interests VALUES(11,10);
-INSERT INTO task_interests VALUES(12,6);
-INSERT INTO task_interests VALUES(12,7);
-INSERT INTO task_interests VALUES(12,8);
-INSERT INTO task_interests VALUES(12,13);
-INSERT INTO task_interests VALUES(13,8);
-INSERT INTO task_interests VALUES(14,8);
-INSERT INTO task_interests VALUES(15,11);
-INSERT INTO task_interests VALUES(15,13);
-
-
-
+INSERT INTO task_interest VALUES(1,1);
+INSERT INTO task_interest VALUES(4,1);
+INSERT INTO task_interest VALUES(14,1);
+INSERT INTO task_interest VALUES(2,1);
+INSERT INTO task_interest VALUES(2,4);
+INSERT INTO task_interest VALUES(2,15);
+INSERT INTO task_interest VALUES(3,1);
+INSERT INTO task_interest VALUES(3,2);
+INSERT INTO task_interest VALUES(3,5);
+INSERT INTO task_interest VALUES(3,10);
+INSERT INTO task_interest VALUES(4,1);
+INSERT INTO task_interest VALUES(4,15);
+INSERT INTO task_interest VALUES(5,2);
+INSERT INTO task_interest VALUES(6,2);
+INSERT INTO task_interest VALUES(7,3);
+INSERT INTO task_interest VALUES(8,4);
+INSERT INTO task_interest VALUES(9,6);
+INSERT INTO task_interest VALUES(9,10);
+INSERT INTO task_interest VALUES(11,6);
+INSERT INTO task_interest VALUES(11,10);
+INSERT INTO task_interest VALUES(12,6);
+INSERT INTO task_interest VALUES(12,7);
+INSERT INTO task_interest VALUES(12,8);
+INSERT INTO task_interest VALUES(12,13);
+INSERT INTO task_interest VALUES(13,8);
+INSERT INTO task_interest VALUES(14,8);
+INSERT INTO task_interest VALUES(15,11);
+INSERT INTO task_interest VALUES(15,13);
