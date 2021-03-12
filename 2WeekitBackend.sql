@@ -1,7 +1,7 @@
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE Users(
-	user_id INTEGER PRIMARY KEY,
+	user_id INTEGER PRIMARY KEY AUTOINCREMENT,
 	username VARCHAR(20),
 	name VARCHAR(20),
 	password VARCHAR(20),
@@ -10,14 +10,14 @@ CREATE TABLE Users(
 );
 
 CREATE TABLE Tasks(
-	task_id INTEGER PRIMARY KEY,
+	task_id INTEGER PRIMARY KEY AUTOINCREMENT,
 	task_name varchar(20),
 	task_def varchar(200)
 );
 
 
 CREATE Table Interests(
-	interest_id INTEGER PRIMARY KEY,
+	interest_id INTEGER PRIMARY KEY AUTOINCREMENT,
 	interest_name varchar(20)
 );
 
@@ -48,6 +48,14 @@ CREATE TABLE task_interest(
 	FOREIGN KEY (interest_id) REFERENCES Interests(interest_id),
 	FOREIGN KEY (task_id) REFERENCES tasks(task_id)
 );
+
+CREATE TABLE feed(
+	user_id INTEGER,
+	post_notes VARCHAR(500),
+	FOREIGN KEY (interest_id) REFERENCES Interests(interest_id),
+	FOREIGN KEY (task_id) REFERENCES tasks(task_id)
+);
+
 
 INSERT INTO Users VALUES(1,'usamapuri','Usama', 12345678, 'usamapuri@gmail.com');
 INSERT INTO Users VALUES(2,'hanakasatio','Hanaka', 12345678, 'hanaka.saito@minerva.kgi.edu');
